@@ -6,7 +6,10 @@ public class Player : MonoBehaviour
 {
     public float jumpCharge { get; private set; }
     public int playerHealth { get; private set; } = 100;
-    
+
+    const float chargeIncrease = 0.008f;
+    const float chargeDecay = 0.005f;
+
     Rigidbody2D playerRB;
     Transform playerTransform;
 
@@ -64,13 +67,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            jumpCharge += 0.008f;
+            jumpCharge += chargeIncrease;
             if (jumpCharge > 3)
             { jumpCharge = 3; }
         }
         else
         {
-            jumpCharge -= 0.005f;
+            jumpCharge -= chargeDecay;
             if (jumpCharge < 0)
             {  jumpCharge = 0; }
         }
