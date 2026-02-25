@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     const float chargeIncrease = 0.008f;
     const float chargeDecay = 0.005f;
+    const int jumpStrength = 6;
 
     Rigidbody2D playerRB;
     Transform playerTransform;
@@ -82,7 +83,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        playerRB.linearVelocityY = 5 + (Mathf.Round(jumpCharge) * 2) + 1;
+        playerRB.linearVelocityY = jumpStrength + (jumpCharge * 2);
         jumpCharge = 0;
     }
 }
