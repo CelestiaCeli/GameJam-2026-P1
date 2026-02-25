@@ -81,9 +81,14 @@ public class Player : MonoBehaviour
         chargeMeter.UpdateChargeMeter(jumpCharge);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void PlayerJump()
     {
         playerRB.linearVelocityY = jumpStrength + (jumpCharge * 2);
         jumpCharge = 0;
+    }
+
+    public float GetPlayerVelocity()
+    {
+        return playerRB.linearVelocityY;
     }
 }
