@@ -7,15 +7,16 @@ public class Player : MonoBehaviour
     public float jumpCharge { get; private set; }
     public int playerHealth { get; private set; } = 100;
 
-    const float chargeIncrease = 0.008f;
-    const float chargeDecay = 0.005f;
-    const int jumpStrength = 6;
+    const float CHARGE_INCREASE = 3f;
+    const float CHARGE_DECAY = 2f;
+    const int JUMP_STRENGTH = 6;
 
-    const float MAX_VELOCITY = 8;
-    const float MIN_VELOCITY = -8;
+    const float MAX_VELOCITY = 8f;
+    const float MIN_VELOCITY = -8f;
+    const float SPEED = 12f;
 
     Rigidbody2D playerRB;
-    Transform playerTransform;
+    public Transform playerTransform;
 
     [SerializeField]
     ChargeMeter chargeMeter;
@@ -62,20 +63,20 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            playerRB.linearVelocityX -= 0.02f;
+            playerRB.linearVelocityX -= SPEED * Time.deltaTime;
         }
         else if (!Input.GetKey(KeyCode.A) && playerRB.linearVelocityX < 0)
         {
-            playerRB.linearVelocityX += 0.02f;
+            playerRB.linearVelocityX += SPEED * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            playerRB.linearVelocityX += 0.02f;
+            playerRB.linearVelocityX += SPEED * Time.deltaTime;
         }
         else if (!Input.GetKey(KeyCode.D) && playerRB.linearVelocityX > 0)
         {
-            playerRB.linearVelocityX -= 0.02f;
+            playerRB.linearVelocityX -= SPEED * Time.deltaTime;
         }
 
 
@@ -90,13 +91,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            jumpCharge += chargeIncrease;
+            jumpCharge += CHARGE_INCREASE * Time.deltaTime;
             if (jumpCharge > 3)
             { jumpCharge = 3; }
         }
         else
         {
-            jumpCharge -= chargeDecay;
+            jumpCharge -= CHARGE_DECAY * Time.deltaTime;
             if (jumpCharge < 0)
             {  jumpCharge = 0; }
         }
@@ -105,7 +106,7 @@ public class Player : MonoBehaviour
 
     public void PlayerJump()
     {
-        playerRB.linearVelocityY = jumpStrength + (jumpCharge * 2);
+        playerRB.linearVelocityY = JUMP_STRENGTH + (jumpCharge * 2);
         jumpCharge = 0;
     }
 
