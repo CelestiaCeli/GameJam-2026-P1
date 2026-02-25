@@ -31,13 +31,15 @@ public class TileSegmentGenerator : MonoBehaviour
             for (int ii = 0; ii < layers[i].tiles.Count; ii++)
             {
                 GameObject newTile = layers[i].tiles[ii];
-
-                GameObject instantiatedNewTile = Instantiate(newTile);
                 float spawnPosX = spawnPos.x + (avgSize * ii);
                 float spawnPosY = spawnPos.y + (YSize * (i + NAN_OFFSET));
                 
+                Debug.Log(avgSize);
+                Debug.Log(spawnPosY);
                 newTile.transform.position = new Vector2(spawnPosX * spawnPosOffset.x, spawnPosY * spawnPosOffset.y);
-                instantiatedLayers[i].tiles.Add(newTile);
+                
+                GameObject instantiatedNewTile = Instantiate(newTile, transform);
+                instantiatedLayers[i].tiles.Add(instantiatedNewTile);
             }
             
         }
@@ -49,7 +51,7 @@ public class TileSegmentGenerator : MonoBehaviour
         float divisionPoint = tiles.Count;
         foreach (GameObject layers in tiles)
         { 
-            totalX += layers.GetComponent<SpriteRenderer>().sprite.border.x;
+            totalX += layers.transform.localScale.x;
         }
         
         float average = totalX / divisionPoint;
@@ -70,7 +72,7 @@ public class TileSegmentGenerator : MonoBehaviour
             Debug.Log(layer.tiles.Count);
             foreach (GameObject tile in layer.tiles)
             {
-                layerY += tile.GetComponent<SpriteRenderer>().sprite.border.y;
+                layerY += tile.transform.localScale.y;
             }
             average += layerY / perLayerDivisionPoint;
         }
