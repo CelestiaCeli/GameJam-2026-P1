@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRB;
     Transform playerTransform;
 
+    [SerializeField]
+    ChargeMeter chargeMeter;
+    [SerializeField]
+    HealthMeter healthMeter;
+    [SerializeField]
+    BoxCollider2D groundCheck;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,13 +53,33 @@ public class Player : MonoBehaviour
 
     void CheckInput()
     {
-        /*if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            player.position -= new Vector3(-4, 0, 0);
+            playerTransform.position += new Vector3(-0.01f, 0, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            player.position -= new Vector3(4, 0, 0);
-        }*/
+            playerTransform.position += new Vector3(0.01f, 0, 0);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            jumpCharge += 0.008f;
+            if (jumpCharge > 3)
+            { jumpCharge = 3; }
+        }
+        else
+        {
+            jumpCharge -= 0.005f;
+            if (jumpCharge < 0)
+            {  jumpCharge = 0; }
+        }
+        chargeMeter.UpdateChargeMeter(jumpCharge);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        playerRB.linearVelocityY = 5 + (Mathf.Round(jumpCharge) * 2) + 1;
+        jumpCharge = 0;
     }
 }
