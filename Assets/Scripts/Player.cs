@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     const float chargeDecay = 0.005f;
     const int jumpStrength = 6;
 
+    const float MAX_VELOCITY = 8;
+    const float MIN_VELOCITY = -8;
+
     Rigidbody2D playerRB;
     Transform playerTransform;
 
@@ -59,11 +62,30 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            playerTransform.position += new Vector3(-0.01f, 0, 0);
+            playerRB.linearVelocityX -= 0.02f;
         }
+        else if (!Input.GetKey(KeyCode.A) && playerRB.linearVelocityX < 0)
+        {
+            playerRB.linearVelocityX += 0.02f;
+        }
+
         if (Input.GetKey(KeyCode.D))
         {
-            playerTransform.position += new Vector3(0.01f, 0, 0);
+            playerRB.linearVelocityX += 0.02f;
+        }
+        else if (!Input.GetKey(KeyCode.D) && playerRB.linearVelocityX > 0)
+        {
+            playerRB.linearVelocityX -= 0.02f;
+        }
+
+
+        if (playerRB.linearVelocityX > MAX_VELOCITY)
+        {
+            playerRB.linearVelocityX = MAX_VELOCITY;
+        }
+        if (playerRB.linearVelocityX < MIN_VELOCITY)
+        {
+            playerRB.linearVelocityX = MIN_VELOCITY;
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -90,5 +112,10 @@ public class Player : MonoBehaviour
     public float GetPlayerVelocity()
     {
         return playerRB.linearVelocityY;
+    }
+
+    public void SetPlayerVelocity(float value)
+    {
+        playerRB.linearVelocityY = value;
     }
 }
