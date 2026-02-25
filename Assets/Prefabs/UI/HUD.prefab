@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062600de0f9805149bad5d804268b8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthMeter
+  player: {fileID: 0}
+  fillBar: {fileID: 7305028451782913221}
 --- !u!1 &8954511032754794351
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4031cc1cf88d4174083098ce037c0280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChargeMeter
+  player: {fileID: 0}
+  fillBar: {fileID: 8383399850654011037}
 --- !u!1 &9143540484198918047
 GameObject:
   m_ObjectHideFlags: 0
