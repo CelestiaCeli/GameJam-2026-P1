@@ -10,5 +10,7 @@ public class Ibuprofen : Item
         {
             player.Heal(HP_RESTORED);
         }
+
+        Destroy(gameObject);
     }
 }
