@@ -4,17 +4,17 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    public float jumpCharge;
-    public int playerHealth;
+    private float jumpCharge;
+    private int playerHealth = 100;
     
     Rigidbody2D playerRB;
-    Transform player;
+    Transform playerTransform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
-        player = GetComponent<Transform>();
+        playerTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -23,14 +23,25 @@ public class Player : MonoBehaviour
         CheckInput();
     }
 
-    public void Heal()
+    public void Heal(int healthRestored)
     {
-
+        if(playerHealth < 100)
+        {
+            playerHealth += healthRestored;
+            if(playerHealth > 100)
+            {
+                playerHealth = 100;
+            }
+        }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int healthDamaged)
     {
-
+        playerHealth -= healthDamaged;
+        if(playerHealth < 0)
+        {
+            playerHealth = 0;
+        }
     }
 
     void CheckInput()
