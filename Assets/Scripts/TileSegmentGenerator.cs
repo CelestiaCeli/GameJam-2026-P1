@@ -14,7 +14,7 @@ public class TileSegmentGenerator : MonoBehaviour
     
     void Start()
     {
-        const int NANOFFSET = 1;
+        const int NAN_OFFSET = 1;
         float YSize = GetAverageLayerYSize(layers);
         for(int i = 0; i < layers.Count; i++)
         {
@@ -28,7 +28,7 @@ public class TileSegmentGenerator : MonoBehaviour
 
                 GameObject instantiatedNewTile = Instantiate(newTile);
                 float spawnPosX = spawnPos.x + (avgSize * ii);
-                float spawnPosY = spawnPos.y + (YSize * (i + NANOFFSET));
+                float spawnPosY = spawnPos.y + (YSize * (i + NAN_OFFSET));
                 
                 Debug.Log(i);
                 newTile.transform.position = new Vector2(spawnPosX, spawnPosY);
