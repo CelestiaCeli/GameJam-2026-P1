@@ -7,6 +7,12 @@ public class TileSegmentGenerator : MonoBehaviour
     public Vector2 spawnPos { get; private set; }
 
     public Vector2 finalSpawnPos { get; private set; } = new Vector2();
+
+    [field: SerializeField]
+    public Vector2 spawnPosOffset { get; private set; } = new Vector2();
+
+    [field: SerializeField]
+    private float Size;
     [field: SerializeField]
     public List<collectionOfTiles> layers = new List<collectionOfTiles>();
 
@@ -30,7 +36,7 @@ public class TileSegmentGenerator : MonoBehaviour
                 float spawnPosX = spawnPos.x + (avgSize * ii);
                 float spawnPosY = spawnPos.y + (YSize * (i + NAN_OFFSET));
                 
-                newTile.transform.position = new Vector2(spawnPosX, spawnPosY);
+                newTile.transform.position = new Vector2(spawnPosX * spawnPosOffset.x, spawnPosY * spawnPosOffset.y);
                 instantiatedLayers[i].tiles.Add(newTile);
             }
             
