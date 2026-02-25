@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             playerHealth = 0;
         }
     }
-
+    
     void CheckInput()
     {
         if (Input.GetKey(KeyCode.A))
