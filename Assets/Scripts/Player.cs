@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    private float jumpCharge;
-    private int playerHealth = 100;
+    public float jumpCharge { get; private set; }
+    public int playerHealth { get; private set; } = 100;
     
     Rigidbody2D playerRB;
     Transform playerTransform;
