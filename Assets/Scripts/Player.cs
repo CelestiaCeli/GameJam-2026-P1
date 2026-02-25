@@ -6,9 +6,20 @@ public class Player : MonoBehaviour
 {
     public float jumpCharge { get; private set; }
     public int playerHealth { get; private set; } = 100;
-    
+
+    const float chargeIncrease = 0.008f;
+    const float chargeDecay = 0.005f;
+    const int jumpStrength = 6;
+
     Rigidbody2D playerRB;
     Transform playerTransform;
+
+    [SerializeField]
+    ChargeMeter chargeMeter;
+    [SerializeField]
+    HealthMeter healthMeter;
+    [SerializeField]
+    BoxCollider2D groundCheck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,13 +57,33 @@ public class Player : MonoBehaviour
 
     void CheckInput()
     {
-        /*if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            player.position -= new Vector3(-4, 0, 0);
+            playerTransform.position += new Vector3(-0.01f, 0, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            player.position -= new Vector3(4, 0, 0);
-        }*/
+            playerTransform.position += new Vector3(0.01f, 0, 0);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            jumpCharge += chargeIncrease;
+            if (jumpCharge > 3)
+            { jumpCharge = 3; }
+        }
+        else
+        {
+            jumpCharge -= chargeDecay;
+            if (jumpCharge < 0)
+            {  jumpCharge = 0; }
+        }
+        chargeMeter.UpdateChargeMeter(jumpCharge);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        playerRB.linearVelocityY = jumpStrength + (jumpCharge * 2);
+        jumpCharge = 0;
     }
 }
