@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRB;
     Transform playerTransform;
 
+    public float playerHeight { get; private set; } = 0;
+
     [SerializeField]
     ChargeMeter chargeMeter;
     [SerializeField]
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         CheckInput();
+        playerHeight = gameObject.transform.position.y;
     }
 
     public void Heal(int healthRestored)

@@ -30,7 +30,6 @@ public class TileSegmentGenerator : MonoBehaviour
                 float spawnPosX = spawnPos.x + (avgSize * ii);
                 float spawnPosY = spawnPos.y + (YSize * (i + NAN_OFFSET));
                 
-                Debug.Log(i);
                 newTile.transform.position = new Vector2(spawnPosX, spawnPosY);
                 instantiatedLayers[i].tiles.Add(newTile);
             }
