@@ -4,6 +4,8 @@ public class BounceCheck : MonoBehaviour
 {
     Player player;
 
+    private const int BrickBrainDamage = -5;
+
     void Start()
     {
         player = GetComponent<Player>();
@@ -27,6 +29,7 @@ public class BounceCheck : MonoBehaviour
         {
             if (player.chargeAmount > 0)
             {
+                player.ModifyHP(BrickBrainDamage);
                 Destroy(other.gameObject);
                 player.chargeAmount--;
             }

@@ -43,25 +43,17 @@ public class Player : MonoBehaviour
         playerHeight = gameObject.transform.position.y;
     }
 
-    public void Heal(int healthRestored)
+    public void ModifyHP(int health)
     {
-        if(playerHealth < 100)
-        {
-            playerHealth += healthRestored;
-            if(playerHealth > 100)
-            {
-                playerHealth = 100;
-            }
-        }
+        if (playerHealth + health > 0 && playerHealth + health < 100) { playerHealth += health; }
+
+        Debug.Log(playerHealth);
+        healthMeter.UpdateHealthMeter(playerHealth);
     }
 
-    public void TakeDamage(int healthDamaged)
+    public void KillYourself()
     {
-        playerHealth -= healthDamaged;
-        if(playerHealth < 0)
-        {
-            playerHealth = 0;
-        }
+        
     }
     
     void CheckInput()
