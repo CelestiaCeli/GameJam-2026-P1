@@ -534,7 +534,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 566786046780080183, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1459820893828068262, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_fontAsset
@@ -626,11 +626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341303013895898490, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4524637338103628549, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4953615054046282505, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_AnchorMax.x
@@ -686,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7284106836283544473, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7295356583642296145, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_Pivot.x
@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8450866913824005306, guid: f504c2348eb659445a721890b86e3082, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
