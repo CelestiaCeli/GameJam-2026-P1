@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerDeathScript : MonoBehaviour
 {
-    [SerializeField]
     public bool Stationary;
 
     [SerializeField] private GameObject player;
