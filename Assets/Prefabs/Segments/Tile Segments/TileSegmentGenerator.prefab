@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5944122583851302253}
   - component: {fileID: 7031093878552487527}
   m_Layer: 0
-  m_Name: TileSegmentEndless
+  m_Name: TileSegmentGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileSegmentGenerator
   <spawnPos>k__BackingField: {x: 0, y: 0}
-  <spawnPosOffset>k__BackingField: {x: 0.4, y: 0.4}
+  <spawnPosOffset>k__BackingField: {x: 1.2, y: 1.5}
   Size: 0
   layers:
   - tiles:

@@ -54,11 +54,6 @@ public class Player : MonoBehaviour
         healthMeter.UpdateHealthMeter(playerHealth);
     }
 
-    public void KillYourself()
-    {
-        
-    }
-
     public void FreezePlayer()
     {
         playerVelocityBuffer = playerRB.linearVelocity;
