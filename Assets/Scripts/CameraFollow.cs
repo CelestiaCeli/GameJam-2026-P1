@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
     Transform playerPos;
 
     Camera mainCamera;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,10 +16,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerPos.position.y > (Screen.height / 2))
-        {
-            Debug.Log("MOVE THAT CAMERA!");
-            mainCamera.transform.position = new Vector3(0, playerPos.position.y, 0);
-        }
+        if (playerPos.position.y > mainCamera.transform.position.y)
+        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, playerPos.position.y, mainCamera.transform.position.z);
     }
 }
