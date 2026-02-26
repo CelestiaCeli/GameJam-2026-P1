@@ -25,12 +25,12 @@ public class BounceCheck : MonoBehaviour
         }
         else if (other.gameObject.tag == "Brick")
         {
-            if (player.GetPlayerVelocity() > 5)
+            if (player.chargeAmount > 0)
             {
                 Destroy(other.gameObject);
-                player.SetPlayerVelocity(0);
+                player.chargeAmount--;
             }
-            else if (player.GetPlayerVelocity() > 0)
+            else 
             {
                 player.SetPlayerVelocity(0);
             }

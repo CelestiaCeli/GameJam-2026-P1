@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     const float MIN_VELOCITY = -8f;
     const float SPEED = 12f;
 
+    public int chargeAmount;
+
     Rigidbody2D playerRB;
     public Transform playerTransform;
 
@@ -97,6 +99,8 @@ public class Player : MonoBehaviour
             jumpCharge += CHARGE_INCREASE * Time.deltaTime;
             if (jumpCharge > 3)
             { jumpCharge = 3; }
+
+            chargeAmount = (int)jumpCharge;
         }
         else
         {
