@@ -95,7 +95,7 @@ MonoBehaviour:
   <fillUpBox>k__BackingField: {fileID: 3727887027624111089}
   <fillUpAmount>k__BackingField: {x: 99, y: 15, z: 0}
   <SPEED>k__BackingField: 0.33
-  <nextScene>k__BackingField: 
+  <nextScene>k__BackingField: 0
 --- !u!1 &3727887027624111089
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2822813224425553719
 RectTransform:
   m_ObjectHideFlags: 0

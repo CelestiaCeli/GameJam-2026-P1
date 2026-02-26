@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerDeathScript : MonoBehaviour
 {
     [SerializeField]
+    public bool Stationary;
+
+    [SerializeField] private GameObject player;
+    
+    [SerializeField]
     GameObject deathScreen;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,5 +19,11 @@ public class PlayerDeathScript : MonoBehaviour
             deathScreen.SetActive(true);
             Destroy(collision.gameObject);
         }
+    }
+
+    //Follows the player height, but does not drop down
+    void Update()
+    {
+        
     }
 }
