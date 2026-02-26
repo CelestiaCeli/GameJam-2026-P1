@@ -15,10 +15,15 @@ public class Player : MonoBehaviour
     const float MAX_VELOCITY = 8f;
     const float MIN_VELOCITY = -8f;
     const float SPEED = 12f;
+    public bool collided = false;
+
+    public int chargeAmount;
 
     Rigidbody2D playerRB;
     public Transform playerTransform;
     Vector2 playerVelocityBuffer;
+
+    public float playerHeight { get; private set; } = 0;
 
     [SerializeField]
     ChargeMeter chargeMeter;
@@ -38,27 +43,20 @@ public class Player : MonoBehaviour
     void Update()
     {
         CheckInput();
+        playerHeight = gameObject.transform.position.y;
     }
 
-    public void Heal(int healthRestored)
+    public void ModifyHP(int health)
     {
-        if(playerHealth < 100)
-        {
-            playerHealth += healthRestored;
-            if(playerHealth > 100)
-            {
-                playerHealth = 100;
-            }
-        }
+        if (playerHealth + health > 0 && playerHealth + health < 100) { playerHealth += health; }
+
+        Debug.Log(playerHealth);
+        healthMeter.UpdateHealthMeter(playerHealth);
     }
 
-    public void TakeDamage(int healthDamaged)
+    public void KillYourself()
     {
-        playerHealth -= healthDamaged;
-        if(playerHealth < 0)
-        {
-            playerHealth = 0;
-        }
+        
     }
 
     public void FreezePlayer()
@@ -104,11 +102,13 @@ public class Player : MonoBehaviour
             playerRB.linearVelocityX = MIN_VELOCITY;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !collided)
         {
             jumpCharge += CHARGE_INCREASE * Time.deltaTime;
             if (jumpCharge > 3)
             { jumpCharge = 3; }
+
+            chargeAmount = (int)jumpCharge;
         }
         else
         {

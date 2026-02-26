@@ -9,7 +9,7 @@ public class Ibuprofen : Item
         Player player = collision.GetComponent<Player>();
         if (player != null)
         {
-            player.Heal(HP_RESTORED);
+            player.ModifyHP(HP_RESTORED);
         }
 
         OnHit();
