@@ -45,9 +45,5 @@ public class BounceCheck : MonoBehaviour
                 player.PlayerJump();
             }
         }
-        else
-        {
-            player.PlayerJump();
-        }
     }
 }

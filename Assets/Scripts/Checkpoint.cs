@@ -6,6 +6,8 @@ public class Checkpoint : MonoBehaviour
     GameObject[] Bricks;
     [SerializeField]
     CameraFollow mainCamera;
+    [SerializeField]
+    Vector3 teleportPoint;
 
     // Update is called once per frame
     void Update()
@@ -14,6 +16,7 @@ public class Checkpoint : MonoBehaviour
         {
             mainCamera.isFollowingPlayer = true;
             Destroy(this.gameObject);
+            TeleportPlayer();
         }
     }
 
@@ -32,5 +35,11 @@ public class Checkpoint : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void TeleportPlayer()
+    {
+        GameObject player = GameObject.Find("Player");
+        player.transform.position = teleportPoint;
     }
 }
