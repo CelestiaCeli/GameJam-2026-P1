@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1018930313}
+    - target: {fileID: 4833606263686817265, guid: bcd3b6091e7c8875f95b4680ae8d13b4, type: 3}
+      propertyPath: isFollowingPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6635144970990455895, guid: bcd3b6091e7c8875f95b4680ae8d13b4, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -763,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6114893207182488785, guid: 521d1a7a77bc337ce8f0d45b10527f0a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.0691805
+      value: -1.5308194
       objectReference: {fileID: 0}
     - target: {fileID: 6114893207182488785, guid: 521d1a7a77bc337ce8f0d45b10527f0a, type: 3}
       propertyPath: m_LocalPosition.y
