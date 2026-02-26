@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     const float MAX_VELOCITY = 8f;
     const float MIN_VELOCITY = -8f;
     const float SPEED = 12f;
+    public bool collided = false;
 
     public int chargeAmount;
 
@@ -86,7 +87,7 @@ public class Player : MonoBehaviour
             playerRB.linearVelocityX = MIN_VELOCITY;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !collided)
         {
             jumpCharge += CHARGE_INCREASE * Time.deltaTime;
             if (jumpCharge > 3)

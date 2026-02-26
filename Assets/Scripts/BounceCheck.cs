@@ -17,6 +17,7 @@ public class BounceCheck : MonoBehaviour
         {
             if (player.GetPlayerVelocity() < 0)
             {
+                player.collided = false;
                 player.PlayerJump();
 
                 if (other.gameObject.GetComponent<Platform>().isBreakable)
@@ -32,6 +33,7 @@ public class BounceCheck : MonoBehaviour
                 player.ModifyHP(BrickBrainDamage);
                 Destroy(other.gameObject);
                 player.chargeAmount--;
+                player.collided = true;
             }
             else 
             {
