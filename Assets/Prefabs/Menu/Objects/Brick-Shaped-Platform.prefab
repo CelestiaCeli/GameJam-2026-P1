@@ -151,3 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   isBreakable: 0
+  isMoving: 0
+  movingLeft: 0
