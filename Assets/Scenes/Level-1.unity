@@ -127,6 +127,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407164674014433063, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 407164674014433063, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_isOrthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407164674014433063, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 407164674014433063, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201975048238780803, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959172784827108658, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959172784827108658, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959172784827108658, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365139377452681343, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461072074444164608, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2630521055981387460, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -146,6 +186,14 @@ PrefabInstance:
     - target: {fileID: 4908794558103327435, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613971797676315071, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613971797676315071, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8000803710939659438, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
       propertyPath: m_Pivot.x
@@ -226,6 +274,10 @@ PrefabInstance:
     - target: {fileID: 8000803710939659438, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961464130395888047, guid: 18cfc63081225b5519f8ea0850c9ab9a, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
