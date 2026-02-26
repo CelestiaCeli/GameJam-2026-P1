@@ -129,4 +129,9 @@ public class Player : MonoBehaviour
     {
         playerRB.linearVelocityY = value;
     }
+
+    public void SetPlayerVelocityX(float value)
+    {
+        playerRB.linearVelocityX = value;
+    }
 }

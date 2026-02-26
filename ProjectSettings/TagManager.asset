@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Brick
   - Checkpoint
+  - MovablePlatform
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - GroundCheck
   - HeadCheck
   - Checkpoint
-  - 
+  - MovablePlatforms
   - 
   - 
   - 

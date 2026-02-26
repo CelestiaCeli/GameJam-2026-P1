@@ -50,4 +50,21 @@ public class BounceCheck : MonoBehaviour
             return;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Platform")
+        {
+            Platform platformHit = other.gameObject.GetComponent<Platform>();
+            Rigidbody2D platformRB = platformHit.GetComponent<Rigidbody2D>();
+            if (platformHit.movingVertical)
+            {
+                player.SetPlayerVelocity(platformRB.linearVelocityY + player.GetPlayerVelocity());
+            }
+            else
+            {
+                player.SetPlayerVelocityX(platformRB.linearVelocityX);
+            }
+        }
+    }
 }

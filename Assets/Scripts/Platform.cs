@@ -1,48 +1,64 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
     public bool isBreakable;
+    public bool movingVertical;
 
     [SerializeField]
     bool isMoving;
     [SerializeField]
-    bool movingLeft;
+    float speed;
+    [SerializeField]
+    float moveDistance;
 
     private Vector3 originPoint;
-    [field: SerializeField] private Vector3 moveLeftAmount = new Vector3(-3,0,0); 
-    [field: SerializeField] private Vector3 moveRightAmount = new Vector3(6,0,0);
+    private Rigidbody2D platformRB;
 
-    [field: SerializeField] public float Speed;
-    private float timevar = 0;
-    
-    void Update()
+    void Start()
     {
-        timevar += Time.deltaTime;
-        if (isMoving && movingLeft)
+        platformRB = gameObject.GetComponent<Rigidbody2D>();
+        if (movingVertical)
         {
-            this.gameObject.transform.position = Vector2.Lerp(originPoint, moveLeftAmount, timevar * Speed);
-            this.gameObject.transform.position -= new Vector3(3, 0, 0) * Time.deltaTime;
-            if (this.gameObject.transform.position == moveLeftAmount && movingLeft)
+            platformRB.linearVelocity = new Vector2(0, speed);
+            platformRB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+        }
+        else
+        {
+            platformRB.linearVelocity = new Vector2(speed, 0);
+            platformRB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+        }
+
+        originPoint = this.transform.position;
+    }
+
+    private void MovePlatform()
+    {
+        if(movingVertical)
+        {
+            float distanceY = this.transform.position.y - originPoint.y;
+            if (distanceY >= moveDistance || distanceY <= -moveDistance)
             {
-                originPoint =  this.gameObject.transform.position;
-                movingLeft = false;
+                platformRB.linearVelocityY = -platformRB.linearVelocityY;
             }
         }
-        if (isMoving && !movingLeft)
+        else
         {
-            this.gameObject.transform.position = Vector2.Lerp(originPoint, moveRightAmount, timevar * Speed);
-            if (this.gameObject.transform.position == moveRightAmount && !movingLeft)
+            float distanceX = this.transform.position.x - originPoint.x;
+            if (distanceX >= moveDistance || distanceX <= -moveDistance)
             {
-                originPoint = this.gameObject.transform.position;
-                movingLeft = true;
+                platformRB.linearVelocityX = -platformRB.linearVelocityX;
             }
         }
     }
 
-    private void Start()
+    void Update()
     {
-        originPoint = this.gameObject.transform.position;
+        if(isMoving)
+        {
+            MovePlatform();
+        }
     }
 }
