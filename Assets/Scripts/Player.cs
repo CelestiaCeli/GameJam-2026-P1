@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public float jumpCharge { get; private set; }
+    [field:SerializeField]
     public int playerHealth { get; private set; } = 100;
 
     const float CHARGE_INCREASE = 3f;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D playerRB;
     public Transform playerTransform;
+    Vector2 playerVelocityBuffer;
 
     [SerializeField]
     ChargeMeter chargeMeter;
@@ -57,6 +59,19 @@ public class Player : MonoBehaviour
         {
             playerHealth = 0;
         }
+    }
+
+    public void FreezePlayer()
+    {
+        playerVelocityBuffer = playerRB.linearVelocity;
+        playerRB.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+    public void UnfreezePlayer()
+    {
+        playerRB.constraints = RigidbodyConstraints2D.FreezeRotation;
+        playerRB.linearVelocityX = playerVelocityBuffer.x;
+        playerRB.linearVelocityY = -playerVelocityBuffer.y;
     }
     
     void CheckInput()
