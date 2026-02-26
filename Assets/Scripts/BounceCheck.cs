@@ -45,5 +45,9 @@ public class BounceCheck : MonoBehaviour
                 player.PlayerJump();
             }
         }
+        else if (other.gameObject.tag == "Checkpoint")
+        {
+            return;
+        }
     }
 }
