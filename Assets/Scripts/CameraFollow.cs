@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
     Transform playerPos;
 
     Camera mainCamera;
+    private bool isStuck;
 
     public bool isFollowingPlayer;
 
@@ -20,5 +21,10 @@ public class CameraFollow : MonoBehaviour
     {
         if (playerPos.position.y > mainCamera.transform.position.y && isFollowingPlayer)
         mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, playerPos.position.y, mainCamera.transform.position.z);
+    }
+
+    void CameraIsStuck(bool _isStuck)
+    {
+        isStuck = _isStuck;
     }
 }
