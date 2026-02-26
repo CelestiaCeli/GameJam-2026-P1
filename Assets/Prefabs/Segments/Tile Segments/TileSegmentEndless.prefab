@@ -45,24 +45,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileSegmentGenerator
   <spawnPos>k__BackingField: {x: 0, y: 0}
+  <spawnPosOffset>k__BackingField: {x: 0.4, y: 0.4}
+  Size: 0
   layers:
   - tiles:
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
   - tiles:
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
   - tiles:
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
   - tiles:
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
-    - {fileID: 5243213847443543038, guid: 61d5bb8e09a58bca682b27fd5de8ff4d, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}
+    - {fileID: 522321966930791899, guid: b225c1df078d581418cf5b8d0d20039e, type: 3}

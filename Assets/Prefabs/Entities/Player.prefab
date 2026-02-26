@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32fd9fd497a22449b0101dc0b394377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  chargeAmount: 0
   playerTransform: {fileID: 0}
   chargeMeter: {fileID: 0}
   healthMeter: {fileID: 0}
