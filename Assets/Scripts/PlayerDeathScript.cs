@@ -19,10 +19,4 @@ public class PlayerDeathScript : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-
-    //Follows the player height, but does not drop down
-    void Update()
-    {
-        
-    }
 }
