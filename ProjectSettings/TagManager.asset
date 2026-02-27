@@ -7,6 +7,8 @@ TagManager:
   - Platform
   - Brick
   - Checkpoint
+  - BrickPlatform
+  - IceBrick
   layers:
   - Default
   - TransparentFX
