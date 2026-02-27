@@ -150,3 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41eaaf399eea8d4294bc6984cc8885f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceBrick
+  <sprites>k__BackingField: []
