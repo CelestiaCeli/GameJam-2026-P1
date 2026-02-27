@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BounceCheck : MonoBehaviour
@@ -61,6 +62,7 @@ public class BounceCheck : MonoBehaviour
         }
         else if (other.gameObject.tag == "IceBrick")
         {
+            player.frozen = true;
             if (player.chargeAmount > 0)
             {
                 player.chargeAmount--;
@@ -75,10 +77,20 @@ public class BounceCheck : MonoBehaviour
             {
                 player.PlayerJump();
             }
+
+            StartCoroutine(FrozenTimer());
+            
+            Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Checkpoint")
         {
             return;
         }
+    }
+
+    private IEnumerator FrozenTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        player.frozen = false;
     }
 }

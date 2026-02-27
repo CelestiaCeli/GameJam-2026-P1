@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - BrickPlatform
   - IceBrick
+  - Ibuprofen
   layers:
   - Default
   - TransparentFX
