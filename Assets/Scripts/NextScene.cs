@@ -56,6 +56,7 @@ public class NextScene : MonoBehaviour
             fillUpBox.SetActive(true);
             fillUpFinished = false;
             yield return new WaitUntil(() => fillUpFinished);
+            Destroy(SoundManager.instance.gameObject);
             SceneManager.LoadScene(nextScene);
             yield return true;
             yield break;
