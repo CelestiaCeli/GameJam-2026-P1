@@ -26,12 +26,26 @@ public class BounceCheck : MonoBehaviour
                 }
             }
         }
+        else if (other.gameObject.tag == "BrickPlatform")
+        {
+            
+            if (player.GetPlayerVelocity() < 0)
+            {
+                player.collided = false;
+                player.PlayerJump();
+
+                if (other.gameObject.GetComponent<Platform>().isBreakable)
+                {
+                    Destroy(other.transform.parent.gameObject);
+                }
+            }
+        }
         else if (other.gameObject.tag == "Brick")
         {
             
             if (player.chargeAmount > 0)
             {
-                Destroy(other.gameObject);
+                Destroy(other.transform.parent.gameObject);
                 player.chargeAmount--;
                 player.collided = true;
             }
