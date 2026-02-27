@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     const float MAX_VELOCITY = 8f;
     const float MIN_VELOCITY = -8f;
     const float SPEED = 12f;
+    public bool frozen;
     public bool collided = false;
 
     public int chargeAmount;
@@ -69,6 +70,10 @@ public class Player : MonoBehaviour
     
     void CheckInput()
     {
+        if (frozen)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.A))
         {
             playerRB.linearVelocityX -= SPEED * Time.deltaTime;
