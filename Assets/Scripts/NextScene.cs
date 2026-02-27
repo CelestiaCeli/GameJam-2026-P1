@@ -6,6 +6,8 @@ public class NextScene : MonoBehaviour
 {
     [field: SerializeField]
     public GameObject fillUpBox { get; private set; }
+
+    public GameObject playerGameObject { get; private set; }
     
     [field: SerializeField]
     public Vector3 fillUpAmount { get; private set; }
@@ -38,6 +40,8 @@ public class NextScene : MonoBehaviour
             Time += UnityEngine.Time.deltaTime;
             Transform originTransform = fillUpBox.transform;
             RectTransform rectTransform = fillUpBox.GetComponent<RectTransform>();
+            Transform originalPlayerTransform = playerGameObject.transform;
+            playerGameObject.transform.position = Vector2.Lerp(originalPlayerTransform.position, fillUpAmount, Time * SPEED);
             fillUpBox.transform.localScale = Vector2.Lerp(originTransform.localScale, fillUpAmount, Time * SPEED);
             if (fillUpBox.transform.localScale == fillUpAmount)
             {
@@ -51,6 +55,7 @@ public class NextScene : MonoBehaviour
         Debug.Log("Hit");
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerGameObject = collision.gameObject;
             fillUpBox.SetActive(true);
             fillUpFinished = false;
             yield return new WaitUntil(() => fillUpFinished);
