@@ -222,6 +222,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 260723955}
+        m_TargetAssemblyTypeName: PlayerDeathScript, Assembly-CSharp
+        m_MethodName: set_paused
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   playerExit:
     m_PersistentCalls:
       m_Calls:
@@ -249,6 +261,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 260723955}
+        m_TargetAssemblyTypeName: PlayerDeathScript, Assembly-CSharp
+        m_MethodName: set_paused
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &57792802
 Transform:
   m_ObjectHideFlags: 0
@@ -264,6 +288,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &65322308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6193216459813957375, guid: c0c31155ae3224149ac43d95299b32b0, type: 3}
+  m_PrefabInstance: {fileID: 1093660959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &116732591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,6 +672,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d05f614dea691a819ca93eae14981d0, type: 3}
+--- !u!114 &260723955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8690482989952766392, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+  m_PrefabInstance: {fileID: 1087281756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb5ea9cac6b62c4f940bb57b2857da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDeathScript
 --- !u!1001 &351681528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -983,6 +1023,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 260723955}
+        m_TargetAssemblyTypeName: PlayerDeathScript, Assembly-CSharp
+        m_MethodName: set_paused
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   playerExit:
     m_PersistentCalls:
       m_Calls:
@@ -1001,6 +1053,18 @@ MonoBehaviour:
       - m_Target: {fileID: 824500608}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 260723955}
+        m_TargetAssemblyTypeName: PlayerDeathScript, Assembly-CSharp
+        m_MethodName: set_paused
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1087,6 +1151,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2549407603268935228, guid: c0c31155ae3224149ac43d95299b32b0, type: 3}
   m_PrefabInstance: {fileID: 1093660959}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1087281756
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276744120414507940, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610212901504255475, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: m_Name
+      value: DeathZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690482989952766392, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 65322308}
+    - target: {fileID: 8690482989952766392, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
+      propertyPath: DEATHOFFSET
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84e411c571d2bcb4bac8bddc0f00c485, type: 3}
 --- !u!1001 &1093660959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1967,3 +2100,4 @@ SceneRoots:
   - {fileID: 57792802}
   - {fileID: 915306821}
   - {fileID: 6173901783214972007}
+  - {fileID: 1087281756}
