@@ -28,14 +28,31 @@ public class BounceCheck : MonoBehaviour
         }
         else if (other.gameObject.tag == "Brick")
         {
+            
             if (player.chargeAmount > 0)
             {
-                player.ModifyHP(BrickBrainDamage);
                 Destroy(other.gameObject);
                 player.chargeAmount--;
                 player.collided = true;
             }
             else 
+            {
+                player.SetPlayerVelocity(0);
+            }
+
+            if (player.GetPlayerVelocity() < 0)
+            {
+                player.PlayerJump();
+            }
+        }
+        else if (other.gameObject.tag == "IceBrick")
+        {
+            if (player.chargeAmount > 0)
+            {
+                player.chargeAmount--;
+                player.collided = true;
+            }
+            else
             {
                 player.SetPlayerVelocity(0);
             }

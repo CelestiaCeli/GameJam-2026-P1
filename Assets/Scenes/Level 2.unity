@@ -694,6 +694,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 575257583017257723, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 575257583017257723, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: moveDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 767069361902419668, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: m_Name
+      value: Platform (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 767069361902419668, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230747080422455532, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230747080422455532, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: moveDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038698856484269251, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2338875990879956295, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -734,9 +762,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3567083722397922996, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567083722397922996, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: moveDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386021715571614363, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4699055653270684655, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
       propertyPath: m_Name
       value: Challenge 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122210748491939714, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353420640879389613, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353420640879389613, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: moveDistance
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
