@@ -803,7 +803,7 @@ Transform:
   m_GameObject: {fileID: 613207120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 104.3, z: 0}
+  m_LocalPosition: {x: -0.2, y: 104.3, z: 2.02}
   m_LocalScale: {x: 45, y: 55, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1627,6 +1627,17 @@ PrefabInstance:
       propertyPath: moveDistance
       value: 5
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 637782771898073123, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 637782771898073123, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: targetPos.y
+      value: -21.69
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 767069361902419668, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
       propertyPath: m_Name
       value: Platform (29)
@@ -1687,6 +1698,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 2523136123196917458, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523136123196917458, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: loggable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523136123196917458, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: targetPos.y
+      value: -10
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 3567083722397922996, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
       propertyPath: speed
       value: 1.5
@@ -1695,6 +1721,25 @@ PrefabInstance:
       propertyPath: moveDistance
       value: 6
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 3788360533889192210, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788360533889192210, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: targetPos.y
+      value: -7.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368529366412706353, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368529366412706353, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: targetPos.y
+      value: -24.38
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 4386021715571614363, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -1714,6 +1759,10 @@ PrefabInstance:
     - target: {fileID: 5353420640879389613, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
       propertyPath: moveDistance
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415810111798666048, guid: 9fb8784de8124ceaca79db3c80a4c38c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1789,6 +1838,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.01
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 2636077670866113742, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915038636447770748, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: speed
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915038636447770748, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: targetPos.x
+      value: -1.647454
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915038636447770748, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: targetPos.y
+      value: 25.73
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 4167908489686092547, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1833,6 +1901,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition-1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 7450137114306639789, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: speed
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450137114306639789, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: loggable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450137114306639789, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: targetPos.x
+      value: 2.543982
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450137114306639789, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: targetPos.y
+      value: 26.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476914085890689823, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.91
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 9039154724736832383, guid: dac87d8692908d06faa04f6735fd8bc3, type: 3}
       propertyPath: m_Size.x
       value: 1.1043043
