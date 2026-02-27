@@ -455,6 +455,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32fd9fd497a22449b0101dc0b394377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  <playerHealth>k__BackingField: 100
+  rightShoe: {fileID: 0}
+  leftShoe: {fileID: 0}
+  maxRotation: 0
+  frozen: 0
+  collided: 0
   chargeAmount: 0
   playerTransform: {fileID: 0}
   chargeMeter: {fileID: 0}

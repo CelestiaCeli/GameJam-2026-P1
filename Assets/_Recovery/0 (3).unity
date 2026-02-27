@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5944122583851302253, guid: 8d05f614dea691a819ca93eae14981d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: -1.57
       objectReference: {fileID: 0}
     - target: {fileID: 5944122583851302253, guid: 8d05f614dea691a819ca93eae14981d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -646,10 +646,6 @@ PrefabInstance:
     - target: {fileID: 7031093878552487527, guid: 8d05f614dea691a819ca93eae14981d0, type: 3}
       propertyPath: <spawnPosOffset>k__BackingField.y
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031093878552487527, guid: 8d05f614dea691a819ca93eae14981d0, type: 3}
-      propertyPath: layers.Array.data[3].tiles.Array.size
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7031093878552487527, guid: 8d05f614dea691a819ca93eae14981d0, type: 3}
       propertyPath: layers.Array.data[4].tiles.Array.size

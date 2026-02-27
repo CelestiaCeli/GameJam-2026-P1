@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     [field:SerializeField]
     public int playerHealth { get; private set; } = 100;
 
+    [SerializeField] private GameObject rightShoe;
+    [SerializeField] private GameObject leftShoe;
+    [SerializeField] private float maxRotation;
+    
     const float CHARGE_INCREASE = 3f;
     const float CHARGE_DECAY = 2f;
     const int JUMP_STRENGTH = 6;
@@ -107,6 +111,8 @@ public class Player : MonoBehaviour
             jumpCharge += CHARGE_INCREASE * Time.deltaTime;
             if (jumpCharge > 3)
             { jumpCharge = 3; }
+            
+
 
             chargeAmount = (int)jumpCharge;
         }
