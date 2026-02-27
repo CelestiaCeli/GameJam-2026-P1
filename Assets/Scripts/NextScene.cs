@@ -39,10 +39,8 @@ public class NextScene : MonoBehaviour
         {
             Time += UnityEngine.Time.deltaTime;
             Transform originTransform = fillUpBox.transform;
-            RectTransform rectTransform = fillUpBox.GetComponent<RectTransform>();
-            Transform originalPlayerTransform = playerGameObject.transform;
-            playerGameObject.transform.position = Vector2.Lerp(originalPlayerTransform.position, fillUpAmount, Time * SPEED);
             fillUpBox.transform.localScale = Vector2.Lerp(originTransform.localScale, fillUpAmount, Time * SPEED);
+            
             if (fillUpBox.transform.localScale == fillUpAmount)
             {
                 fillUpFinished = true;
@@ -52,7 +50,6 @@ public class NextScene : MonoBehaviour
     
     public IEnumerator SceneTransition(Collider2D collision)
     {
-        Debug.Log("Hit");
         if (collision.gameObject.CompareTag("Player"))
         {
             playerGameObject = collision.gameObject;
@@ -61,6 +58,7 @@ public class NextScene : MonoBehaviour
             yield return new WaitUntil(() => fillUpFinished);
             SceneManager.LoadScene(nextScene);
             yield return true;
+            yield break;
         }
 
         yield return false;
