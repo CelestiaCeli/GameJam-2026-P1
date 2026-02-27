@@ -8,38 +8,51 @@ public class MovablePlatform : Platform
     [SerializeField]
     private float speed;
     private float offSet = 0.1f;
+    private float overallTime;
+    [SerializeField] private bool loggable = false;
     private bool moveToTarget;
     public Vector2 targetPos;
 
     void Start()
     {
         moveToTarget = true;
-        originPoint = this.gameObject.transform.position;
-        targetPos.y = originPoint.y;
+        originPoint = gameObject.transform.localPosition;
     }
 
     private void MoveToTarget()
     {
-        float difference = Vector2.Distance(this.transform.position, targetPos);
+        float difference = Vector2.Distance(transform.localPosition, targetPos);
+        if (loggable)
+        {
+            Debug.Log(difference);
+            Debug.Log(originPoint);
+            Debug.Log(targetPos);
+        }
+
+        overallTime += Time.deltaTime * speed;
         if(difference > offSet)
         {
-            this.transform.position = Vector2.Lerp(this.transform.position, targetPos, speed * Time.deltaTime);
+            transform.localPosition = Vector2.Lerp(transform.localPosition, targetPos, overallTime);
         }
         else
         {
+            overallTime = 0;
             moveToTarget = false;
         }
     }
 
     private void MoveToOrigin()
     {
-        float difference = Vector2.Distance(this.transform.position, originPoint);
+        float difference = Vector2.Distance(transform.localPosition, originPoint);
+        
+        overallTime += Time.deltaTime * speed;
         if(difference > offSet)
         {
-            this.transform.position = Vector3.Lerp(this.transform.position, originPoint, speed * Time.deltaTime);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, originPoint, overallTime);
         }
         else
         {
+            overallTime = 0;
             moveToTarget = true;
         }
     }
